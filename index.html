@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar</title>
+  <style>
+    body {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+      background-color: #1d1e20;
+      color: #ddd;
+      padding: 0;
+      padding-left: 1rem;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    h1 {
+      margin: 0;
+      margin-top: 0.5rem;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td {
+      position: relative;
+      text-align: left;
+      padding: 0;
+      vertical-align: top;
+    }
+
+    td:not(:first-child) {
+      border: 1px solid #404040;
+      height: calc(130vh / 12);
+    }
+
+    .year {
+      font-weight: 200;
+    }
+
+    .weekday {
+      font-weight: lighter;
+      padding: 0.5rem;
+    }
+
+    .hour {
+      font-size: 0.75rem;
+      color: #555;
+    }
+
+    .event {
+      display: grid;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      z-index: 2;
+      height: 102%;
+      width: 100%;
+      font-weight: 400;
+      font-size: 0.86em;
+      padding: 0.5rem;
+      padding-left: 1em;
+      overflow: visible;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      border-left: 3px solid currentColor;
+    }
+
+    .double {
+      height: 205%;
+    }
+
+    .triple {
+      height: 307%;
+    }
+
+    .quadra {
+      height: 410%;
+    }
+
+    .cyan {
+      background-color: #2F4B58;
+      color: #64d2ff;
+    }
+
+    .mint {
+      background-color: #3c474a;
+      color: #b9e5eb;
+    }
+
+    .lavendar {
+      background-color: #4b4956;
+      color: #d5c9f6;
+    }
+
+    .pink {
+      background-color: #53414B;
+      color: #f3a8ca;
+    }
+
+    .orange {
+      background-color: #3A2F1E;
+      color: #ff9f0a;
+    }
+
+    .violet {
+      margin-top: -5%;
+      background-color: #2E2E52;
+      color: #5e5ce6;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Winter <span class="year">2023</span></h1>
+  <table class="week">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="weekday">Monday</th>
+        <th class="weekday">Tuesday</th>
+        <th class="weekday">Wednesday</th>
+        <th class="weekday">Thursday</th>
+        <th class="weekday">Friday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="hour">09:30</td>
+        <td>
+          <div class="event triple mint">
+            <span>WRITING 2101G<br>
+              LEC 001<br>
+              09:30 - 12:30</span>
+          </div>
+        </td>
+        <td>
+
+          <div class="event double cyan">
+            <span>COMPSCI 2212B<br>
+              LEC 001<br>
+              09:30 - 11:30</span>
+          </div>
+        </td>
+        <td>
+
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="hour">10:30</td>
+        <td></td>
+        <td></td>
+        <td>
+
+          <div class="event cyan">
+            <span>COMPSCI 2212B<br>
+              LEC 001
+              10:30 - 11:30</span>
+          </div>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="hour">11:30</td>
+        <td>
+
+        </td>
+        <td></td>
+        <td></td>
+        <td>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="hour">12:30</td>
+        <td>
+          <div class="event lavendar">
+            <span>COMPSCI 3305B<br>
+              LEC 001
+              12:30 - 01:30</span>
+          </div>
+        </td>
+        <td></td>
+        <td>
+          <div class="event double lavendar">
+            <span>COMPSCI 3305B<br>
+              LEC 001<br>
+              12:30 - 02:30</span>
+          </div>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="hour">13:30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="hour">14:30</td>
+        <td></td>
+        <td>
+          <div class="event orange">
+            <span>COMPSCI 3340B<br>
+              LEC 001
+              02:30 - 03:30</span>
+          </div>
+        </td>
+        <td></td>
+        <td>
+          <div class="event double orange">
+            <span>COMPSCI 3340B<br>
+              LEC 001<br>
+              02:30 - 04:30</span>
+          </div>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="hour">15:30</td>
+        <td>
+          <div class="event double pink">
+            <span>COMPSCI 2210B<br>
+              LEC 001<br>
+              03:30 - 05:30</span>
+          </div>
+        </td>
+        <td></td>
+        <td>
+          <div class="event pink">
+            <span>COMPSCI 2210B<br>
+              LEC 001
+              03:30 - 04:30</span>
+          </div>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      </tr>
+      <tr>
+        <td class="hour">16:30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      </tr>
+      <tr>
+        <td class="hour">17:30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      </tr>
+      <tr>
+        <td class="hour">18:30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      </tr>
+      <tr>
+        <td class="hour">19:30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="hour">19:30</td>
+        <td></td>
+        <td></td>
+        <td>
+          <div class="event triple violet">
+            <span>PSYCHOL 2036B<br>
+              LEC 001<br>
+              07:00 - 10:00</span>
+          </div>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="hour">20:30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="hour">21:30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="hour">22:30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
